@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Happiness Animation Company- Discover Your Happiness</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        } */
+        /* .slideshow-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .slides {
+            display: flex;
+            width: 1000%; 
+            animation: slide 500s infinite linear; 
+        }
+        .slide {
+            width: 100%; 
+            flex-shrink: 0;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            10% { transform: translateX(-100%); }
+            20% { transform: translateX(-200%); }
+            30% { transform: translateX(-300%); }
+            40% { transform: translateX(-400%); }
+            50% { transform: translateX(-500%); }
+            60% { transform: translateX(-600%); }
+            70% { transform: translateX(-700%); }
+            80% { transform: translateX(-800%); }
+            90% { transform: translateX(-900%); }
+            100% { transform: translateX(0); } 
+        } */
+   /* .slideshow-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+} */
+
+/* .slides {
+    display: flex;
+    animation: slide 30s infinite linear;
+} */
+
+/* .slide {
+    min-width: 100%;
+}
+ */
+/* .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+} */
+
+/* Slider Animation */
+/* @keyframes slide {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(-100%);}
+    50% {transform: translateX(-200%);}
+    75% {transform: translateX(-300%);}
+    100% {transform: translateX(0);}
+} */
+
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .slides {
+            display: flex;
+            width: 1000%; /* For 10 images */
+            animation: slide 450s infinite linear; /* Auto-slide every 45s, low speed */
+        }
+        .slide {
+            width: 10%; /* 100% / 10 images */
+            flex-shrink: 0;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            10% { transform: translateX(-100%); }
+            20% { transform: translateX(-200%); }
+            30% { transform: translateX(-300%); }
+            40% { transform: translateX(-400%); }
+            50% { transform: translateX(-500%); }
+            60% { transform: translateX(-600%); }
+            70% { transform: translateX(-700%); }
+            80% { transform: translateX(-800%); }
+            90% { transform: translateX(-900%); }
+            100% { transform: translateX(0); } /* Loop back */
+        }
+
+   </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- <div class="logo">Happiness</div> -->
+            <img src="./images/logo/Screenshot 2025-12-02 204206.png" alt="" class="image">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Discover Your happiness</h1>
+        <p>Create unforgettable memories with us</p>
+        <!-- <div class="search-bar">
+            <input type="text" placeholder="Where do you want to go?">
+            <button type="submit"><i class="fas fa-search"></i> Search</button>
+        </div> -->
+    </section>
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <section class="about2">
+                    <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.52 PM.jpeg" alt="" class="pic">
+        <div class="about-content">
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>Happiness Animation Company is obligated to bring satisfaction to your customers with
+their 20 years' experience of work, based on the creation of happy fitness performers with
+focus on family and children need to live a healthy and happy life.
+We will be pleased to have your confident in our company to bring out the best of your
+business and help to obtain the satisfaction of your customer on an everlasting memorial holiday.</p>
+            </div>
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>Our vision is to become the leading travel platform that connects people with the most breathtaking destinations worldwide. We envision a world where travel is accessible, sustainable, and enriching for everyone, promoting global understanding and personal growth through exploration.</p>
+            </div>
+        </div>
+
+        </section>
+        <!-- <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.52 PM.jpeg" alt="" class="pic">
+        <div class="about-content">
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>Happiness Animation Company is obligated to bring satisfaction to your customers with
+their 20 years' experience of work, based on the creation of happy fitness performers with
+focus on family and children need to live a healthy and happy life.
+We will be pleased to have your confident in our company to bring out the best of your
+business and help to obtain the satisfaction of your customer on an everlasting memorial holiday.</p>
+            </div>
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>Our vision is to become the leading travel platform that connects people with the most breathtaking destinations worldwide. We envision a world where travel is accessible, sustainable, and enriching for everyone, promoting global understanding and personal growth through exploration.</p>
+            </div>
+        </div> -->
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="services-card">
+                <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.05 PM.jpeg" alt="Mountain landscape">
+                <h3>Water Gym</h3>
+                <p>“All our sports activities are under the supervision of a professional
+sports animator with the consideration of the age and type of guests
+in the activity”</p>
+            </div>
+            <div class="services-card">
+                <img src="./images/services/WhatsApp Image 2025-12-22 at 3.29.58 PM.jpeg" alt="Beach paradise">
+                <h3>Water ball</h3>
+                <p>“The water activities should be handled in a funny but professional
+way by the animator”</p>
+            </div>
+            <div class="services-card">
+                <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.25 PM (1).jpeg" alt="City skyline">
+                <h3>Yoga</h3>
+                <p>“Outdoor yoga sessions offered at our resorts, combining relaxation, wellness, and beautiful sea views to create a peaceful holiday experience”</p>
+            </div>
+            <div class="services-card">
+                <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.10 PM.jpeg" alt="Safari adventure">
+                <h3>Fire Shows </h3>
+                <p>“An exciting nighttime fire show performed at the resort, adding energy, entertainment, and unforgettable moments to our guests’ evening experience”</p>
+            </div>
+            <div class="services-card">
+                <img src="./images/services/WhatsApp Image 2025-12-22 at 3.30.10 PM (1).jpeg" alt="Safari adventure">
+                <h3>Kids Fun</h3>
+                <p>“Fun kids’ evening entertainment at the resort, creating joyful moments and unforgettable memories for families during their holiday”</p>
+            </div>
+            <div class="services-card">
+                <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.51 PM.jpeg" alt="Safari adventure">
+                <h3>Fitness Activities</h3>
+                <p>“Daily outdoor fitness activities at the resort, helping guests stay active, energized, and enjoy a healthy holiday in a beautiful natural setting”</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- <section class="Gallery" id="Gallery">
+        <h2>Gallery</h2>
+        <div class="event-grid">
+            <div class="event-item">
+                <i class="fas fa-globe"></i>
+                <h3>Global Destinations</h3>
+                <p>Access to thousands of destinations worldwide</p>
+            </div>
+            <div class="event-item">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Best Prices</h3>
+                <p>Guaranteed lowest prices on all bookings</p>
+            </div>
+            <div class="event-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Safe & Secure</h3>
+                <p>Your safety and security are our top priorities</p>
+            </div>
+            <div class="event-item">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock customer support for all your needs</p>
+            </div>
+        </div> -->
+    <!-- <div class="slideshow-container">
+        <div class="slides">
+            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.05.58 PM.jpeg" alt="Image 1" class="pic2"></div>
+            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.17 PM.jpeg" alt="Image 2" class="pic2"></div>
+            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.25 PM.jpeg" alt="Image 3" class="pic2"></div>
+            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.28 PM (1).jpeg" alt="Image 4" class="pic2"></div>
+            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.05.56 PM.jpeg" alt="Image 5"></div>
+            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.06.00 PM (1).jpeg" alt="Image 6"></div>
+            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-24 at 12.58.12 PM.jpeg" alt="Image 7"></div>
+            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-24 at 12.57.50 PM.jpeg" alt="Image 8"></div>
+            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-24 at 12.57.49 PM.jpeg" alt="Image 9"></div>
+            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-24 at 12.57.49 PM.jpeg" alt="Image 10"></div>
+        </div>
+    </div> -->
+    </section>
+    <div class="slideshow-container">
+        <h2>Gallery</h2>
+        <div class="slides">
+            <div class="slide"><img src="https://picsum.photos/800/400?random=1" alt="Image 1"></div>
+            <div class="slide"><img src="https://picsum.photos/800/400?random=2" alt="Image 2"></div>
+            <div class="slide"><img src="https://picsum.photos/800/400?random=3" alt="Image 3"></div>
+            <div class="slide"><img src="https://picsum.photos/800/400?random=4" alt="Image 4"></div>
+            <div class="slide"><img src="https://picsum.photos/800/400?random=5" alt="Image 5"></div>
+            <div class="slide"><img src="https://picsum.photos/800/400?random=6" alt="Image 6"></div>
+            <div class="slide"><img src="https://picsum.photos/800/400?random=7" alt="Image 7"></div>
+            <div class="slide"><img src="https://picsum.photos/800/400?random=8" alt="Image 8"></div>
+            <div class="slide"><img src="https://picsum.photos/800/400?random=9" alt="Image 9"></div>
+            <div class="slide"><img src="https://picsum.photos/800/400?random=10" alt="Image 10"></div>
+        </div>
+    </div>
+
+    <section class="work-with-us" id="career">
+        <h2>Join Our Team</h2>
+        <p>Join our team and help create unforgettable experiences!</p>
+        <form action="mailto:hr@travelexplorer.com" method="post" enctype="text/plain" class="application-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <!-- <div class="form-group">
+                <label for="position">Position Interested In</label>
+                <select id="position" name="position">
+                    <option value="">Select Position</option>
+                    <option value="tour-guide">Tour Guide</option>
+                    <option value="marketing">Marketing Specialist</option>
+                    <option value="customer-service">Customer Service</option>
+                    <option value="web-developer">Web Developer</option>
+                    <option value="other">Other</option>
+                </select>
+            </div> -->
+            <!-- <div class="form-group">
+                <label for="experience">Years of Experience</label>
+                <input type="number" id="experience" name="experience" min="0">
+            </div> -->
+            <div class="form-group">
+                <label for="message">Why do you want to work with us?</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+            <p>© 2025 Happiness Animation Company</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

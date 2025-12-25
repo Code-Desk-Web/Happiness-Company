@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happiness Animation Company</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #003366;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #fff, #e6f2ff);
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 180px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #003366;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.8)),
+                url("https://picsum.photos/1600/900?random=10") center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hero h1 {
+    font-size: 44px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* ================= ABOUT ================= */
+.about {
+    padding: 80px 20px;
+    background: #f8fbff;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.about2 {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.about2 img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.mission, .vision {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    margin-bottom: 20px;
+}
+
+/* ================= SERVICES ================= */
+.services {
+    padding: 80px 20px;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.services-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 30px;
+}
+
+.services-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.services-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.services-card h3 {
+    padding: 15px;
+}
+
+.services-card p {
+    padding: 0 15px 20px;
+    color: #555;
+}
+
+/* ================= GALLERY ================= */
+.Gallery {
+    padding: 20px 0;
+    background: linear-gradient(180deg,#fff,#e6f2ff);
+}
+
+.Gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.slideshow-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    /* animation: slide 30s infinite linear; */
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Slider Animation */
+@keyframes slide {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(-100%);}
+    50% {transform: translateX(-200%);}
+    75% {transform: translateX(-300%);}
+    100% {transform: translateX(0);}
+}
+
+/* ================= CAREER ================= */
+.work-with-us {
+    padding: 80px 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.work-with-us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.application-form {
+    display: grid;
+    gap: 15px;
+}
+
+.application-form input,
+.application-form textarea {
+    padding: 12px;
+    border: 2px solid #003366;
+    border-radius: 6px;
+}
+
+.application-form button {
+    padding: 14px;
+    background: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 22px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .about2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <img src="https://picsum.photos/300/100?random=1">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#Gallery">Gallery</a></li>
+            <li><a href="#career">Career</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Discover Your Happiness</h1>
+    <p>Create unforgettable memories with us</p>
+</section>
+
+<section class="about" id="about">
+    <h2>About Us</h2>
+    <div class="about2">
+        <img src="https://picsum.photos/500/500?random=2">
+        <div>
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>Bringing happiness and unforgettable experiences for families and children.</p>
+            </div>
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>To become the leading entertainment and animation company worldwide.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+        <div class="services-card">
+            <img src="https://picsum.photos/400/300?random=3">
+            <h3>Water Gym</h3>
+            <p>Fun and healthy water activities.</p>
+        </div>
+        <div class="services-card">
+            <img src="https://picsum.photos/400/300?random=4">
+            <h3>Yoga</h3>
+            <p>Relaxing outdoor yoga sessions.</p>
+        </div>
+        <div class="services-card">
+            <img src="https://picsum.photos/400/300?random=5">
+            <h3>Kids Fun</h3>
+            <p>Entertainment for children.</p>
+        </div>
+    </div>
+</section>
+
+<section class="Gallery" id="Gallery">
+    <h2>Gallery</h2>
+    <div class="slideshow-container">
+        <div class="slides">
+            <div class="slide"><img src="https://picsum.photos/1000/500?random=6"></div>
+            <div class="slide"><img src="https://picsum.photos/1000/500?random=7"></div>
+            <div class="slide"><img src="https://picsum.photos/1000/500?random=8"></div>
+            <div class="slide"><img src="https://picsum.photos/1000/500?random=9"></div>
+        </div>
+    </div>
+</section>
+
+<section class="work-with-us" id="career">
+    <h2>Join Our Team</h2>
+    <form class="application-form">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <textarea rows="4" placeholder="Why do you want to work with us?"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <div>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>© 2025 Happiness Animation Company</p>
+</footer>
+<script>
+const slides = document.querySelector('.slides');
+const slideCount = document.querySelectorAll('.slide').length;
+
+let index = 0;
+
+setInterval(() => {
+    index++;
+
+    if (index === slideCount) {
+        // نرجع لأول صورة من غير حركة
+        slides.style.transition = 'none';
+        index = 0;
+        slides.style.transform = `translateX(0%)`;
+
+        // نرجع الانيميشن تاني
+        setTimeout(() => {
+            slides.style.transition = 'transform 0.8s ease-in-out';
+        }, 50);
+    } else {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+}, 2000); // وقت تغيير الصورة (4 ثواني)
+</script>
+
+</body>
+</html>
