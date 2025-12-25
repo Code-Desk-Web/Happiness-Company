@@ -447,6 +447,7 @@ nav ul li a:hover {
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top:5%;
 }
 
 .submit-btn:hover {
