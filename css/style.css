@@ -389,6 +389,9 @@ nav ul li a:hover {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top:5%;
+    display: block;
+    margin:15px auto;
+    width: 55%;
 }
 
 .submit-btn:hover {
