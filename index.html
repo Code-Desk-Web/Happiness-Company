@@ -8,122 +8,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        } */
-        /* .slideshow-container {
-            position: relative;
-            width: 100%;
-            max-width: 1000px;
-            height: auto;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .slides {
-            display: flex;
-            width: 1000%; 
-            animation: slide 500s infinite linear; 
-        }
-        .slide {
-            width: 100%; 
-            flex-shrink: 0;
-        }
-        .slide img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 10px;
-        }
-        @keyframes slide {
-            0% { transform: translateX(0%); }
-            10% { transform: translateX(-100%); }
-            20% { transform: translateX(-200%); }
-            30% { transform: translateX(-300%); }
-            40% { transform: translateX(-400%); }
-            50% { transform: translateX(-500%); }
-            60% { transform: translateX(-600%); }
-            70% { transform: translateX(-700%); }
-            80% { transform: translateX(-800%); }
-            90% { transform: translateX(-900%); }
-            100% { transform: translateX(0); } 
-        } */
-   /* .slideshow-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-} */
-
-/* .slides {
-    display: flex;
-    animation: slide 30s infinite linear;
-} */
-
-/* .slide {
-    min-width: 100%;
-}
- */
-/* .slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
-} */
-
-/* Slider Animation */
-/* @keyframes slide {
-    0% {transform: translateX(0);}
-    25% {transform: translateX(-100%);}
-    50% {transform: translateX(-200%);}
-    75% {transform: translateX(-300%);}
-    100% {transform: translateX(0);}
-} */
-
-        /* .slideshow-container {
-            position: relative;
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .slides {
-            display: flex;
-            width: 1000%; 
-            animation: slide 450s infinite linear; 
-        }
-        .slide {
-            width: 10%; 
-            flex-shrink: 0;
-        }
-        .slide img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        @keyframes slide {
-            0% { transform: translateX(0); }
-            10% { transform: translateX(-100%); }
-            20% { transform: translateX(-200%); }
-            30% { transform: translateX(-300%); }
-            40% { transform: translateX(-400%); }
-            50% { transform: translateX(-500%); }
-            60% { transform: translateX(-600%); }
-            70% { transform: translateX(-700%); }
-            80% { transform: translateX(-800%); }
-            90% { transform: translateX(-900%); }
-            100% { transform: translateX(0); } 
-        }
- */
-
  /* ===== Gallery Section ===== */
 .gallery-section {
   margin: 80px auto;
@@ -233,10 +117,6 @@
     <section class="hero" id="home">
         <h1>Discover Your happiness</h1>
         <p>Create unforgettable memories with us</p>
-        <!-- <div class="search-bar">
-            <input type="text" placeholder="Where do you want to go?">
-            <button type="submit"><i class="fas fa-search"></i> Search</button>
-        </div> -->
     </section>
     <section class="about" id="about">
         <h2>About Us</h2>
@@ -328,23 +208,6 @@ way by the animator”</p>
     <button class="gallery-btn next">&#10095;</button>
   </div>
 </section>
-
-    <!-- <div class="slideshow-container">
-        <h2>Gallery</h2>
-        <div class="slides">
-            <div class="slide"><img src="https://picsum.photos/800/400?random=1" alt="Image 1"></div>
-            <div class="slide"><img src="https://picsum.photos/800/400?random=2" alt="Image 2"></div>
-            <div class="slide"><img src="https://picsum.photos/800/400?random=3" alt="Image 3"></div>
-            <div class="slide"><img src="https://picsum.photos/800/400?random=4" alt="Image 4"></div>
-            <div class="slide"><img src="https://picsum.photos/800/400?random=5" alt="Image 5"></div>
-            <div class="slide"><img src="https://picsum.photos/800/400?random=6" alt="Image 6"></div>
-            <div class="slide"><img src="https://picsum.photos/800/400?random=7" alt="Image 7"></div>
-            <div class="slide"><img src="https://picsum.photos/800/400?random=8" alt="Image 8"></div>
-            <div class="slide"><img src="https://picsum.photos/800/400?random=9" alt="Image 9"></div>
-            <div class="slide"><img src="https://picsum.photos/800/400?random=10" alt="Image 10"></div>
-        </div>
-    </div> -->
-
     <section class="work-with-us" id="career">
         <h2>Join Our Team</h2>
         <p>Join our team and help create unforgettable experiences!</p>
@@ -416,40 +279,6 @@ function showMessage(e) {
 
     <script src="js/script.js"></script>
     <script>
-// const track = document.querySelector(".gallery-track");
-// const slides = document.querySelectorAll(".gallery-track img");
-// const nextBtn = document.querySelector(".next");
-// const prevBtn = document.querySelector(".prev");
-
-// let index = 0;
-
-// function updateSlide() {
-//   track.style.transform = `translateX(-${index * slides[0].clientWidth}px)`;
-// }
-
-// nextBtn.addEventListener("click", () => {
-//   index++;
-//   if (index >= slides.length) {
-//     index = 0;
-//   }
-//   updateSlide();
-// });
-
-// prevBtn.addEventListener("click", () => {
-//   index--;
-//   if (index < 0) {
-//     index = slides.length - 1;
-//   }
-//   updateSlide();
-// });
-
-// setInterval(() => {
-//   index++;
-//   if (index >= slides.length) {
-//     index = 0;
-//   }
-//   updateSlide();
-// }, 4000);
 </script>
 
 </body>
