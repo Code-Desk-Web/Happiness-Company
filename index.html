@@ -87,7 +87,7 @@
     100% {transform: translateX(0);}
 } */
 
-        .slideshow-container {
+        /* .slideshow-container {
             position: relative;
             max-width: 800px;
             margin: auto;
@@ -97,11 +97,11 @@
         }
         .slides {
             display: flex;
-            width: 1000%; /* For 10 images */
-            animation: slide 450s infinite linear; /* Auto-slide every 45s, low speed */
+            width: 1000%; 
+            animation: slide 450s infinite linear; 
         }
         .slide {
-            width: 10%; /* 100% / 10 images */
+            width: 10%; 
             flex-shrink: 0;
         }
         .slide img {
@@ -120,8 +120,95 @@
             70% { transform: translateX(-700%); }
             80% { transform: translateX(-800%); }
             90% { transform: translateX(-900%); }
-            100% { transform: translateX(0); } /* Loop back */
+            100% { transform: translateX(0); } 
         }
+ */
+
+ /* ===== Gallery Section ===== */
+.gallery-section {
+  margin: 80px auto;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  margin-bottom: 30px;
+}
+
+/* Wrapper */
+.gallery-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Gallery box */
+.gallery-container {
+  width: 700px;
+  height: 500px;        /* 👈 صغرنا الطول */
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* Track */
+.gallery-track {
+  display: flex;
+  width: calc(700px * 12); /* 👈 عدد الصور */
+  animation: slowScroll 40s linear infinite;
+}
+/* للديسكتوب */
+@keyframes slowScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-700px * 6));
+  }
+}
+/* للموبايل */
+@media (max-width: 768px) {
+  .gallery-track {
+    width: calc(90vw * 12);
+  }
+
+  @keyframes slowScroll {
+    100% {
+      transform: translateX(calc(-90vw * 6));
+    }
+  }
+}
+.gallery-track img {
+  width: 700px;
+  height: 500px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+/* Arrows */
+.gallery-btn {
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #444;
+  transition: 0.3s;
+}
+
+.gallery-btn:hover {
+  color: #000;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .gallery-container {
+    width: 90vw;
+  }
+
+  .gallery-track img {
+    width: 90vw;
+  }
+}
 
    </style>
    
@@ -135,7 +222,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <!-- <li><a href="#Gallery">Gallery</a></li> -->
+                <li><a href="#Gallery">Gallery</a></li>
                 <li><a href="#career">Career</a></li>
                 <li><a href="#contact">Contact</a></li>
 
@@ -211,8 +298,36 @@ way by the animator”</p>
             </div>
         </div>
     </section>
+    <section class="gallery-section" id="Gallery">
+  <h2>Gallery</h2>
 
-    <div  class="Coming">Coming Soon</div>
+  <div class="gallery-wrapper">
+    <!-- سهم شمال -->
+    <button class="gallery-btn prev">&#10094;</button>
+
+    <!-- الصور -->
+    <div class="gallery-container">
+      <div class="gallery-track">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.05 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.10 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.25 PM (1).jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.51 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.29.58 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.30.10 PM (1).jpeg">
+        <!-- تكرار الصور لعمل سلايد مستمر -->
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.05 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.10 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.25 PM (1).jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.51 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.29.58 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.30.10 PM (1).jpeg">
+      </div>
+    </div>
+
+    <!-- سهم يمين -->
+    <button class="gallery-btn next">&#10095;</button>
+  </div>
+</section>
 
     <!-- <div class="slideshow-container">
         <h2>Gallery</h2>
@@ -233,7 +348,7 @@ way by the animator”</p>
     <section class="work-with-us" id="career">
         <h2>Join Our Team</h2>
         <p>Join our team and help create unforgettable experiences!</p>
-    <form action="https://formspree.io/f/mzdbpvzw" method="POST">
+    <form action="https://formspree.io/f/mzdbpvzw" method="POST" onsubmit="showMessage(event)">
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
@@ -246,27 +361,15 @@ way by the animator”</p>
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone">
             </div>
-            <!-- <div class="form-group">
-                <label for="position">Position Interested In</label>
-                <select id="position" name="position">
-                    <option value="">Select Position</option>
-                    <option value="tour-guide">Tour Guide</option>
-                    <option value="marketing">Marketing Specialist</option>
-                    <option value="customer-service">Customer Service</option>
-                    <option value="web-developer">Web Developer</option>
-                    <option value="other">Other</option>
-                </select>
-            </div> -->
-            <!-- <div class="form-group">
-                <label for="experience">Years of Experience</label>
-                <input type="number" id="experience" name="experience" min="0">
-            </div> -->
             <div class="form-group">
                 <label for="message">Why do you want to work with us?</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
             <button type="submit" class="submit-btn">Submit Application</button>
         </form>
+                <p id="form-message" style="display:none; color:green;">
+            Thank you for contacting us 🤍 </p>
+
     </section>
 
     <footer id="contact">
@@ -276,12 +379,79 @@ way by the animator”</p>
             <a href="https://www.instagram.com/happiness.life.of.animation?igsh=NWM3NXcyYjRsbGRt"><i class="fab fa-instagram"></i></a>
             <a href="Happiness.animation@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
-
  <!-- Happiness Animation Company Where happiness begins -->
   “Happiness starts here 🤍”
     </footer>
+<script>
+function showMessage(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const message = document.getElementById("form-message");
+
+  fetch(form.action, {
+    method: form.method,
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      message.style.display = "block";
+      form.reset();
+    } else {
+      message.style.display = "block";
+      message.style.color = "red";
+      message.innerText = "Something went wrong, please try again.";
+    }
+  })
+  .catch(() => {
+    message.style.display = "block";
+    message.style.color = "red";
+    message.innerText = "Error sending form.";
+  });
+}
+</script>
 
     <script src="js/script.js"></script>
+    <script>
+// const track = document.querySelector(".gallery-track");
+// const slides = document.querySelectorAll(".gallery-track img");
+// const nextBtn = document.querySelector(".next");
+// const prevBtn = document.querySelector(".prev");
+
+// let index = 0;
+
+// function updateSlide() {
+//   track.style.transform = `translateX(-${index * slides[0].clientWidth}px)`;
+// }
+
+// nextBtn.addEventListener("click", () => {
+//   index++;
+//   if (index >= slides.length) {
+//     index = 0;
+//   }
+//   updateSlide();
+// });
+
+// prevBtn.addEventListener("click", () => {
+//   index--;
+//   if (index < 0) {
+//     index = slides.length - 1;
+//   }
+//   updateSlide();
+// });
+
+// setInterval(() => {
+//   index++;
+//   if (index >= slides.length) {
+//     index = 0;
+//   }
+//   updateSlide();
+// }, 4000);
+</script>
+
 </body>
 </html>
 
