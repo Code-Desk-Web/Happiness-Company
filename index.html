@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="uyBNKUoihESzB65L_U_GB1SIUR1Roypp3K9XgLdxZGs" />
     <title> Happiness Animation Company- Discover Your Happiness</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -86,7 +87,7 @@
     100% {transform: translateX(0);}
 } */
 
-        .slideshow-container {
+        /* .slideshow-container {
             position: relative;
             max-width: 800px;
             margin: auto;
@@ -96,11 +97,11 @@
         }
         .slides {
             display: flex;
-            width: 1000%; /* For 10 images */
-            animation: slide 450s infinite linear; /* Auto-slide every 45s, low speed */
+            width: 1000%; 
+            animation: slide 450s infinite linear; 
         }
         .slide {
-            width: 10%; /* 100% / 10 images */
+            width: 10%; 
             flex-shrink: 0;
         }
         .slide img {
@@ -119,16 +120,104 @@
             70% { transform: translateX(-700%); }
             80% { transform: translateX(-800%); }
             90% { transform: translateX(-900%); }
-            100% { transform: translateX(0); } /* Loop back */
+            100% { transform: translateX(0); } 
         }
+ */
+
+ /* ===== Gallery Section ===== */
+.gallery-section {
+  margin: 80px auto;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  margin-bottom: 30px;
+}
+
+/* Wrapper */
+.gallery-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Gallery box */
+.gallery-container {
+  width: 700px;
+  height: 500px;        /* 👈 صغرنا الطول */
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* Track */
+.gallery-track {
+  display: flex;
+  width: calc(700px * 12); /* 👈 عدد الصور */
+  animation: slowScroll 40s linear infinite;
+}
+/* للديسكتوب */
+@keyframes slowScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-700px * 6));
+  }
+}
+/* للموبايل */
+@media (max-width: 768px) {
+  .gallery-track {
+    width: calc(90vw * 12);
+  }
+
+  @keyframes slowScroll {
+    100% {
+      transform: translateX(calc(-90vw * 6));
+    }
+  }
+}
+.gallery-track img {
+  width: 700px;
+  height: 500px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+/* Arrows */
+.gallery-btn {
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #444;
+  transition: 0.3s;
+}
+
+.gallery-btn:hover {
+  color: #000;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .gallery-container {
+    width: 90vw;
+  }
+
+  .gallery-track img {
+    width: 90vw;
+  }
+}
 
    </style>
+   
 </head>
 <body>
     <header>
         <nav>
             <!-- <div class="logo">Happiness</div> -->
-            <img src="./images/logo/Screenshot 2025-12-02 204206.png" alt="" class="image">
+            <img src="./images/logo/ChatGPT Image Dec 26, 2025, 12_36_30 AM.png" alt="" class="image">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -169,21 +258,6 @@ business and help to obtain the satisfaction of your customer on an everlasting 
         </div>
 
         </section>
-        <!-- <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.52 PM.jpeg" alt="" class="pic">
-        <div class="about-content">
-            <div class="mission">
-                <h3>Our Mission</h3>
-                <p>Happiness Animation Company is obligated to bring satisfaction to your customers with
-their 20 years' experience of work, based on the creation of happy fitness performers with
-focus on family and children need to live a healthy and happy life.
-We will be pleased to have your confident in our company to bring out the best of your
-business and help to obtain the satisfaction of your customer on an everlasting memorial holiday.</p>
-            </div>
-            <div class="vision">
-                <h3>Our Vision</h3>
-                <p>Our vision is to become the leading travel platform that connects people with the most breathtaking destinations worldwide. We envision a world where travel is accessible, sustainable, and enriching for everyone, promoting global understanding and personal growth through exploration.</p>
-            </div>
-        </div> -->
     </section>
 
     <section class="services" id="services">
@@ -224,48 +298,38 @@ way by the animator”</p>
             </div>
         </div>
     </section>
-    
+    <section class="gallery-section" id="Gallery">
+  <h2>Gallery</h2>
 
-    <!-- <section class="Gallery" id="Gallery">
-        <h2>Gallery</h2>
-        <div class="event-grid">
-            <div class="event-item">
-                <i class="fas fa-globe"></i>
-                <h3>Global Destinations</h3>
-                <p>Access to thousands of destinations worldwide</p>
-            </div>
-            <div class="event-item">
-                <i class="fas fa-dollar-sign"></i>
-                <h3>Best Prices</h3>
-                <p>Guaranteed lowest prices on all bookings</p>
-            </div>
-            <div class="event-item">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Safe & Secure</h3>
-                <p>Your safety and security are our top priorities</p>
-            </div>
-            <div class="event-item">
-                <i class="fas fa-headset"></i>
-                <h3>24/7 Support</h3>
-                <p>Round-the-clock customer support for all your needs</p>
-            </div>
-        </div> -->
+  <div class="gallery-wrapper">
+    <!-- سهم شمال -->
+    <button class="gallery-btn prev">&#10094;</button>
+
+    <!-- الصور -->
+    <div class="gallery-container">
+      <div class="gallery-track">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.05 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.10 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.25 PM (1).jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.51 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.29.58 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.30.10 PM (1).jpeg">
+        <!-- تكرار الصور لعمل سلايد مستمر -->
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.05 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.10 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.25 PM (1).jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.51 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.29.58 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.30.10 PM (1).jpeg">
+      </div>
+    </div>
+
+    <!-- سهم يمين -->
+    <button class="gallery-btn next">&#10095;</button>
+  </div>
+</section>
+
     <!-- <div class="slideshow-container">
-        <div class="slides">
-            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.05.58 PM.jpeg" alt="Image 1" class="pic2"></div>
-            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.17 PM.jpeg" alt="Image 2" class="pic2"></div>
-            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.25 PM.jpeg" alt="Image 3" class="pic2"></div>
-            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.28 PM (1).jpeg" alt="Image 4" class="pic2"></div>
-            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.05.56 PM.jpeg" alt="Image 5"></div>
-            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-22 at 2.06.00 PM (1).jpeg" alt="Image 6"></div>
-            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-24 at 12.58.12 PM.jpeg" alt="Image 7"></div>
-            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-24 at 12.57.50 PM.jpeg" alt="Image 8"></div>
-            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-24 at 12.57.49 PM.jpeg" alt="Image 9"></div>
-            <div class="slide"><img src="./images/services/WhatsApp Image 2025-12-24 at 12.57.49 PM.jpeg" alt="Image 10"></div>
-        </div>
-    </div> -->
-    </section>
-    <div class="slideshow-container">
         <h2>Gallery</h2>
         <div class="slides">
             <div class="slide"><img src="https://picsum.photos/800/400?random=1" alt="Image 1"></div>
@@ -279,12 +343,12 @@ way by the animator”</p>
             <div class="slide"><img src="https://picsum.photos/800/400?random=9" alt="Image 9"></div>
             <div class="slide"><img src="https://picsum.photos/800/400?random=10" alt="Image 10"></div>
         </div>
-    </div>
+    </div> -->
 
     <section class="work-with-us" id="career">
         <h2>Join Our Team</h2>
         <p>Join our team and help create unforgettable experiences!</p>
-        <form action="mailto:hr@travelexplorer.com" method="post" enctype="text/plain" class="application-form">
+    <form action="https://formspree.io/f/mzdbpvzw" method="POST" onsubmit="showMessage(event)">
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
@@ -297,40 +361,97 @@ way by the animator”</p>
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone">
             </div>
-            <!-- <div class="form-group">
-                <label for="position">Position Interested In</label>
-                <select id="position" name="position">
-                    <option value="">Select Position</option>
-                    <option value="tour-guide">Tour Guide</option>
-                    <option value="marketing">Marketing Specialist</option>
-                    <option value="customer-service">Customer Service</option>
-                    <option value="web-developer">Web Developer</option>
-                    <option value="other">Other</option>
-                </select>
-            </div> -->
-            <!-- <div class="form-group">
-                <label for="experience">Years of Experience</label>
-                <input type="number" id="experience" name="experience" min="0">
-            </div> -->
             <div class="form-group">
                 <label for="message">Why do you want to work with us?</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
             <button type="submit" class="submit-btn">Submit Application</button>
         </form>
+                <p id="form-message" style="display:none; color:green;">
+            Thank you for contacting us 🤍 </p>
+
     </section>
 
     <footer id="contact">
         <div class="social-links">
             <a href="https://www.facebook.com/share/1C59hoa69X/"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/+201203002764"><i class="fab fa-whatsapp"></i></a>
             <a href="https://www.instagram.com/happiness.life.of.animation?igsh=NWM3NXcyYjRsbGRt"><i class="fab fa-instagram"></i></a>
-            <a href="info@happinessanimation.com"><i class="fas fa-envelope"></i></a>
+            <a href="Happiness.animation@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
-            <p>© 2025 Happiness Animation Company</p>
+ <!-- Happiness Animation Company Where happiness begins -->
+  “Happiness starts here 🤍”
     </footer>
+<script>
+function showMessage(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const message = document.getElementById("form-message");
+
+  fetch(form.action, {
+    method: form.method,
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      message.style.display = "block";
+      form.reset();
+    } else {
+      message.style.display = "block";
+      message.style.color = "red";
+      message.innerText = "Something went wrong, please try again.";
+    }
+  })
+  .catch(() => {
+    message.style.display = "block";
+    message.style.color = "red";
+    message.innerText = "Error sending form.";
+  });
+}
+</script>
 
     <script src="js/script.js"></script>
+    <script>
+// const track = document.querySelector(".gallery-track");
+// const slides = document.querySelectorAll(".gallery-track img");
+// const nextBtn = document.querySelector(".next");
+// const prevBtn = document.querySelector(".prev");
+
+// let index = 0;
+
+// function updateSlide() {
+//   track.style.transform = `translateX(-${index * slides[0].clientWidth}px)`;
+// }
+
+// nextBtn.addEventListener("click", () => {
+//   index++;
+//   if (index >= slides.length) {
+//     index = 0;
+//   }
+//   updateSlide();
+// });
+
+// prevBtn.addEventListener("click", () => {
+//   index--;
+//   if (index < 0) {
+//     index = slides.length - 1;
+//   }
+//   updateSlide();
+// });
+
+// setInterval(() => {
+//   index++;
+//   if (index >= slides.length) {
+//     index = 0;
+//   }
+//   updateSlide();
+// }, 4000);
+</script>
+
 </body>
 </html>
 

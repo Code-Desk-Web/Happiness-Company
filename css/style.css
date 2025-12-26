@@ -447,6 +447,7 @@ nav ul li a:hover {
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top:5%;
 }
 
 .submit-btn:hover {
@@ -565,6 +566,13 @@ footer p {
 img {
     max-width: 100%;
     height: auto;
+}
+.Coming {
+    font-size: 36px;
+    text-align: center;
+    margin: 50px 0;
+    color: #003366;
+    
 }
 
 
