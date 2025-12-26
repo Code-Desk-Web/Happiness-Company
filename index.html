@@ -28,7 +28,7 @@
 
 /* Gallery box */
 .gallery-container {
-  width: 700px;
+  width: 900px;
   height: 500px;        /* 👈 صغرنا الطول */
   overflow: hidden;
   border-radius: 14px;
@@ -37,7 +37,7 @@
 /* Track */
 .gallery-track {
   display: flex;
-  width: calc(700px * 12); /* 👈 عدد الصور */
+  width: calc(900px * 20); /* 👈 12 صورة */
   animation: slowScroll 40s linear infinite;
 }
 /* للديسكتوب */
@@ -46,23 +46,23 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-700px * 6));
+    transform: translateX(calc(-900px * 10));
   }
 }
 /* للموبايل */
 @media (max-width: 768px) {
   .gallery-track {
-    width: calc(90vw * 12);
+    width: calc(90vw * 20);
   }
 
   @keyframes slowScroll {
     100% {
-      transform: translateX(calc(-90vw * 6));
+      transform: translateX(calc(-90vw * 10));
     }
   }
 }
 .gallery-track img {
-  width: 700px;
+  width: 900px;
   height: 500px;
   object-fit: cover;
   flex-shrink: 0;
@@ -179,28 +179,37 @@ way by the animator”</p>
         </div>
     </section>
     <section class="gallery-section" id="Gallery">
-  <h2>Gallery</h2>
+    <h2>Gallery</h2>
 
-  <div class="gallery-wrapper">
+    <div class="gallery-wrapper">
     <!-- سهم شمال -->
     <button class="gallery-btn prev">&#10094;</button>
 
     <!-- الصور -->
     <div class="gallery-container">
       <div class="gallery-track">
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.05 PM.jpeg">
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.10 PM.jpeg">
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.25 PM (1).jpeg">
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.51 PM.jpeg">
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.29.58 PM.jpeg">
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.30.10 PM (1).jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.06.00 PM (1).jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-24 at 12.57.49 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-24 at 11.08.42 AM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.05.58 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.08.37 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.17 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.17 PM (1).jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.18 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-24 at 12.58.12 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.28 PM.jpeg">
         <!-- تكرار الصور لعمل سلايد مستمر -->
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.05 PM.jpeg">
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.10 PM.jpeg">
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.25 PM (1).jpeg">
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.51 PM.jpeg">
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.29.58 PM.jpeg">
-        <img src="./images/services/WhatsApp Image 2025-12-22 at 3.30.10 PM (1).jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.06.00 PM (1).jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-24 at 12.57.49 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-24 at 11.08.42 AM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.05.58 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.08.37 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.17 PM (1).jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.17 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.18 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-24 at 12.58.12 PM.jpeg">
+        <img src="./images/services/WhatsApp Image 2025-12-22 at 2.13.28 PM.jpeg">
+
       </div>
     </div>
 
